@@ -6,17 +6,30 @@ import Profile from './Components/Profile';
 
 function App() {
 
+
   console.log("done");
   return (
-    <div>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>
+            <Link to="/" > Home</Link>
+          </ul>
+          <ul>
+            <Link to="/about" >About</Link>
+          </ul>
+          <ul>
+            <Link to="/profile" >Profile</Link>
+          </ul>
+        </nav>
+
         <Routes>
           <Route path='/about' element={<About />} ></Route>
           <Route path='/profile' element={<Profile />} ></Route>
           <Route path='/' element={<Home />} ></Route>
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

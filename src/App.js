@@ -5,6 +5,8 @@ import About from './Components/About';
 import Profile from './Components/Profile';
 
 function App() {
+
+  console.log("done");
   return (
     <div>
       <BrowserRouter>

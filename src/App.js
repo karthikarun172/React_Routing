@@ -6,6 +6,7 @@ import Profile from './Components/Profile';
 
 function App() {
 
+  const name = "ArunKathik"
 
   console.log("done");
   return (
@@ -19,13 +20,13 @@ function App() {
             <Link to="/about" >About</Link>
           </ul>
           <ul>
-            <Link to="/profile" >Profile</Link>
+            <Link to={`/profile/${name}`} >Profile</Link>
           </ul>
         </nav>
 
         <Routes>
           <Route path='/about' element={<About />} ></Route>
-          <Route path='/profile' element={<Profile />} ></Route>
+          <Route path='/profile/:name' element={<Profile />} ></Route>
           <Route path='/' element={<Home />} ></Route>
         </Routes>
       </div>
